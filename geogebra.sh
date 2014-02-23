@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-if dpkg -l geogebra44|grep ii
+if dpkg -l geogebra44|grep -q ii
 then
 	if apt-get install geogebra44 -y
 	then
