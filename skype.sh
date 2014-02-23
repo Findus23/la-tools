@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l adobereader-deu|grep -q ii
+if dpkg -l skype|grep -q ii
 then
 	echo "Skype ist bereits installiert"
 	zenity --info --title "Info" --text "Skype ist bereits installiert"
