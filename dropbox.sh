@@ -6,13 +6,13 @@ then
 	zenity --info --title "Info" --text "Dropbox ist bereits installiert"
 	exit
 fi
-wget -O /tmp/adobe-reader.deb https://www.dropbox.com/download?dl=packages/debian/dropbox_1.6.0_i386.deb
+wget -O /tmp/dropbox.deb https://www.dropbox.com/download?dl=packages/debian/dropbox_1.6.0_i386.deb
 
-if dpkg -i /tmp/adobe-reader.deb -y
+if dpkg -i /tmp/dropbox.deb -y
 then
 	zenity --info --title "Erfolg" --text "Dropbox wurde erfolgreich installiert"
 else
 	zenity --error --title "Fehler" --text "Dropbox wurde nicht erfolgreich installiert"
 fi
-rm /tmp/adobe-reader.deb
+rm /tmp/dropbox.deb
 
