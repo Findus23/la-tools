@@ -2,9 +2,9 @@
 git pull origin master
 version_tag=$(git tag | sort -V |tail -1)
 version_local=$(cat version.txt)
-if [ -f "version.txt" ] || [ "$version_local" -ne "$version_tag" ]
+if [ ! -f "version.txt" ] || [ "$version_local" -ne "$version_tag" ]
 then
-	echo '$version_tag ist aktueller als $version_local'
+	echo "$version_tag ist aktueller als $version_local"
 	git reset --hard $version_tag
 	wget -O releases.json https://api.github.com/repos/Findus23/la-tools/releases
 	name=$(grep -Po -m 1 '"name":.*?[^\\]",' releases.json| cut -c 10- | rev | cut -c 3- | rev)
