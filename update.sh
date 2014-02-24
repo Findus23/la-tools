@@ -1,5 +1,5 @@
 #!/bin/bash
-git pull origin master
+git pull origin master --tags
 version_tag=$(git tag | sort -V |tail -1)
 version_local=$(cat version.txt)
 if [ ! -f "version.txt" ] || [ ! "$version_local" = "$version_tag" ]
