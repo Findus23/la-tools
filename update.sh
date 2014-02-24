@@ -1,9 +1,18 @@
 #!/bin/bash
-echo $1
-echo "git pull origin master
-git reset --hard $1
-zenity --info --title 'Update' --text 'Erfolgreich aktualisiert'
+git pull origin master
+version_tag=$(git tag | sort -V |tail -1)
+version_local=$(cat version.txt)
+if [ $version_local -ne $version_tag ]
+then
+	echo '$version_tag ist aktueller als $version_local'
+	git reset --hard $version_tag
+	wget -O releases.json https://api.github.com/repos/Findus23/la-tools/releases
+	name=$(grep -Po -m 1 '"name":.*?[^\\]",' releases.json| cut -c 10- | rev | cut -c 3- | rev)
+	body=$(grep -Po -m 1 '"body":.*?[^\\]",' releases.json| cut -c 10- | rev | cut -c 3- | rev)
+	echo $version_tag > version.txt
+	zenity --info --title "Update erfolgreich" --text "$name\n\nNeuerungen:\n$body"
+else
+	echo "aktuellste Version installiert"
+fi
 #andere Sachen updaten
-#z.B.: .desktop Datei" > temp.sh
-chmod +x temp.sh
-./temp.sh &
+#z.B.: .desktop Datei
