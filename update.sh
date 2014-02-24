@@ -2,7 +2,7 @@
 git pull origin master
 version_tag=$(git tag | sort -V |tail -1)
 version_local=$(cat version.txt)
-if [ $version_local -ne $version_tag ]
+if [ -f "version.txt" ] || [ "$version_local" -ne "$version_tag" ]
 then
 	echo '$version_tag ist aktueller als $version_local'
 	git reset --hard $version_tag
