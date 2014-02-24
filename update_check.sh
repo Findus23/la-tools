@@ -5,7 +5,7 @@ version_local=$(cat version.txt)
 if [ "$version_local" -lt "$version_online" ]
 then
 	zenity --info --title "Update" --text "Es gibt ein Update"
-	./update.sh &
+	./update.sh $version_online &
 else
 	zenity --info --title "Update" --text "Es gibt kein Update"
 fi
