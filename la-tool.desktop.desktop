@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=LA-Tools
+Name[de]=LA-Tools
+GenericName=Skript-Starter
+GenericName[de]=Skript-Starter
+Comment=diverse Tools und Programme
+Comment[de]=diverse Tools und Programme
+Exec=/home/lukas/git/la-tools/gui.py
+Icon=/home/lukas/git/la-tools/logo265x265.png
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=Utility,System,
+OnlyShowIn=GNOME;XFCE;
