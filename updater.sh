@@ -1,4 +1,4 @@
 #!/bin/bash
-cp update.txt update.sh
+cp update.txt.sh update.sh
 chmod +x update.sh
 ./update.sh &
