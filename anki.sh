@@ -6,7 +6,7 @@ then
 	zenity --info --title "Info" --text "Anki ist bereits installiert"
 	exit
 fi
-wget -O /tmp/anki.deb http://ankisrs.net/download/mirror/anki-2.0.22.deb
+wget -O /tmp/anki.deb http://ankisrs.net/download/mirror/anki-2.0.28.deb
 apt-get install mplayer -y
 if dpkg -i /tmp/anki.deb -y
 then

@@ -7,7 +7,7 @@ then
 	exit
 fi
 
-if sudo apt-get install chromium
+if sudo apt-get install chromium chromium-l10n
 then
 	zenity --info --title "Erfolg" --text "Chromium wurde erfolgreich installiert"
 else
