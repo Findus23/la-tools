@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l opera|grep -q ii
+if dpkg -l | grep opera | grep ii
 then
 	echo "Opera ist bereits installiert"
 	zenity --info --title "Info" --text "Opera ist bereits installiert"

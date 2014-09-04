@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l google-earth-stable|grep -q ii
+if dpkg -l | grep google-earth | grep ii
 then
 	echo "Google Earth ist bereits installiert"
 	zenity --info --title "Info" --text "Google Earth ist bereits installiert"

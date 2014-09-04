@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l anki|grep -q ii
+if dpkg -l | grep anki | grep ii
 then
 	echo "Anki ist bereits installiert"
 	zenity --info --title "Info" --text "Anki ist bereits installiert"

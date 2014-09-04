@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-if dpkg -l flashplugin-nonfree|grep -q ii
+if dpkg -l | grep flashplugin-nonfree | grep ii
 then
 	echo "Flash ist bereits installiert"
 	zenity --info --title "Info" --text "Flash ist bereits installiert"

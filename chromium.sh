@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l chromium|grep -q ii
+if dpkg -l | grep chromium | grep ii
 then
 	echo "Chromium ist bereits installiert"
 	zenity --info --title "Info" --text "Chromium ist bereits installiert"

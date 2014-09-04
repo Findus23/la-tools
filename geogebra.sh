@@ -1,12 +1,12 @@
 #!/bin/bash
 apt-get update
-if dpkg -l geogebra44|grep -q ii
+if dpkg -l | grep dropbox | grep ii
 then
 	if apt-get install geogebra44 -y
 	then
-		zenity --info --title "Erfolg" --text "Geogebra wurde erfolgreich installiert"
+		zenity --info --title "Erfolg" --text "Geogebra wurde erfolgreich aktualisiert"
 	else
-		zenity --error --title "Fehler" --text "Geogebra wurde nicht erfolgreich installiert"
+		zenity --error --title "Fehler" --text "Geogebra wurde nicht erfolgreich aktualisiert"
 	fi
 	exit
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l google-chrome|grep -q ii
+if dpkg -l | grep google-chrome | grep ii
 then
 	echo "Google Chrome ist bereits installiert"
 	zenity --info --title "Info" --text "Google Chrome ist bereits installiert"

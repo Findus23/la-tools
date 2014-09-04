@@ -1,12 +1,8 @@
 #!/bin/bash
-if dpkg -l dropbox|grep -q ii
+if dpkg -l | grep dropbox | grep ii
 then
-	if apt-get install geogebra44 -y
-	then
-		zenity --info --title "Erfolg" --text "Dropbox wurde erfolgreich installiert"
-	else
-		zenity --error --title "Fehler" --text "Dropbox wurde nicht erfolgreich installiert"
-	fi
+	echo "Dropbox ist bereits installiert"
+	zenity --info --title "Info" --text "Dropbox ist bereits installiert"
 	exit
 fi
 sources=$(cat /etc/apt/sources.list.d/dropbox.list)

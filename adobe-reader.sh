@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l adobereader-deu|grep -q ii
+if dpkg -l | grep adobereader-deu | grep ii
 then
 	echo "Adobe-Reader ist bereits installiert"
 	zenity --info --title "Info" --text "Adobe-Reader ist bereits installiert"

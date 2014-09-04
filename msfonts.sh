@@ -1,6 +1,6 @@
 #!/bin/bash
 #apt-get update
-if dpkg -l ttf-mscorefonts-installer|grep -q ii
+if dpkg -l | grep ttf-mscorefonts-installer | grep ii
 then
 	echo "Windows-Schriftarten sind bereits installiert"
 	zenity --info --title "Info" --text "Windows-Schriftarten sind bereits installiert"
