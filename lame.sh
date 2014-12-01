@@ -1,15 +1,18 @@
 #!/bin/bash
-#apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Lame"
+
 if dpkg -l lame|grep -q ii
 then
-	echo "Lame ist bereits installiert"
-	zenity --info --title "Info" --text "Lame ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 
 if sudo apt-get install lame
 then
-	zenity --info --title "Erfolg" --text "Lame wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Lame wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fis

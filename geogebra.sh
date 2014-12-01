@@ -1,12 +1,16 @@
 #!/bin/bash
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Geogebra"
+
 apt-get update
 if dpkg -l | grep dropbox | grep ii
 then
 	if apt-get install geogebra44 -y
 	then
-		zenity --info --title "Erfolg" --text "Geogebra wurde erfolgreich aktualisiert"
+		zenity --info --title $"Success" --text $"$name was successfully updated"
 	else
-		zenity --error --title "Fehler" --text "Geogebra wurde nicht erfolgreich aktualisiert"
+		zenity --error --title $"Error" --text $"An error occurred while updating $name"
 	fi
 	exit
 fi
@@ -22,7 +26,7 @@ then
 fi
 if apt-get install geogebra44 -y
 then
-	zenity --info --title "Erfolg" --text "Geogebra wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Geogebra wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi

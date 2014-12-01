@@ -1,17 +1,20 @@
 #!/bin/bash
-#apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Skype"
+
 if dpkg -l | grep skype | grep ii
 then
-	echo "Skype ist bereits installiert"
-	zenity --info --title "Info" --text "Skype ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 wget -O /tmp/skype.deb http://download.skype.com/linux/skype-debian_4.2.0.13-1_i386.deb
 
 if dpkg -i /tmp/skype.deb -y
 then
-	zenity --info --title "Erfolg" --text "Skype wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Skype wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi
 rm /tmp/skype.deb

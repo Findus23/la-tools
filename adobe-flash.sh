@@ -1,14 +1,18 @@
 #!/bin/bash
-apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Adobe Flash Player"
+
+#apt-get update
 if dpkg -l | grep flashplugin-nonfree | grep ii
 then
-	echo "Flash ist bereits installiert"
-	zenity --info --title "Info" --text "Flash ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 if apt-get install flashplugin-nonfree -y
 then
-	zenity --info --title "Erfolg" --text "Flash wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Flash wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi

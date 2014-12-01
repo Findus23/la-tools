@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: la-tools\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-01 16:57+0100\n"
+"PO-Revision-Date: 2014-12-01 17:01+0100\n"
+"Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: $\"\"\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: adobe-flash.sh:9 adobe-flash.sh:10 adobe-reader.sh:8 adobe-reader.sh:9
+#: anki.sh:8 anki.sh:9 chromium.sh:8 chromium.sh:9 dropbox_neu.sh:8
+#: dropbox_neu.sh:9 dropbox.sh:8 dropbox.sh:9 google-chrome.sh:8
+#: google-chrome.sh:9 google-earth.sh:8 google-earth.sh:9 lame.sh:8 lame.sh:9
+#: msfonts.sh:8 msfonts.sh:9 opera.sh:8 opera.sh:9 skype.sh:8 skype.sh:9
+#, sh-format
+msgid "$name is already installed"
+msgstr "$name ist bereits installiert"
+
+#: adobe-flash.sh:10 adobe-reader.sh:9 anki.sh:9 chromium.sh:9
+#: dropbox_neu.sh:9 dropbox.sh:9 google-chrome.sh:9 google-earth.sh:9
+#: lame.sh:9 msfonts.sh:9 opera.sh:9 skype.sh:9
+msgid "Information"
+msgstr "Information"
+
+#: adobe-flash.sh:15 adobe-reader.sh:16 anki.sh:16 chromium.sh:15
+#: dropbox_neu.sh:23 dropbox.sh:16 geogebra.sh:11 geogebra.sh:29
+#: google-chrome.sh:16 google-earth.sh:23 lame.sh:15 msfonts.sh:15 opera.sh:16
+#: skype.sh:16
+msgid "Success"
+msgstr "Erfolg"
+
+#: adobe-flash.sh:15 adobe-reader.sh:16 anki.sh:16 chromium.sh:15
+#: dropbox_neu.sh:23 dropbox.sh:16 geogebra.sh:29 google-chrome.sh:16
+#: google-earth.sh:23 lame.sh:15 msfonts.sh:15 opera.sh:16 skype.sh:16
+#, sh-format
+msgid "$name successfully installed"
+msgstr "$name wurde erfolgreich installiert"
+
+#: adobe-flash.sh:17 adobe-reader.sh:18 anki.sh:18 chromium.sh:17
+#: dropbox_neu.sh:25 dropbox.sh:18 geogebra.sh:13 geogebra.sh:31
+#: google-chrome.sh:18 google-earth.sh:25 lame.sh:17 msfonts.sh:17 opera.sh:18
+#: skype.sh:18
+msgid "Error"
+msgstr "Fehler "
+
+#: adobe-flash.sh:17 adobe-reader.sh:18 anki.sh:18 chromium.sh:17
+#: dropbox_neu.sh:25 dropbox.sh:18 geogebra.sh:31 google-chrome.sh:18
+#: google-earth.sh:25 lame.sh:17 msfonts.sh:17 opera.sh:18 skype.sh:18
+#, sh-format
+msgid "An error occurred while installing $name"
+msgstr "Bei der Installation von $name ist ein Fehler aufgetreten"
+
+#: geogebra.sh:11
+#, sh-format
+msgid "$name was successfully updated"
+msgstr "$name wurde erfolgreich aktualisiert"
+
+#: geogebra.sh:13
+#, sh-format
+msgid "An error occurred while updating $name"
+msgstr "Bei der Aktualisieren von $name ist ein Fehler aufgetreten"
+
+#: msfonts.sh:4
+msgid "Windows fonts"
+msgstr "Windows Schriftarten"
+
+#, fuzzy
+#~ msgid "$name was not installed"
+#~ msgstr "$name ist bereits installiert"

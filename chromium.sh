@@ -1,15 +1,18 @@
 #!/bin/bash
-#apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Chromium"
+
 if dpkg -l | grep chromium | grep ii
 then
-	echo "Chromium ist bereits installiert"
-	zenity --info --title "Info" --text "Chromium ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 
 if sudo apt-get install chromium chromium-l10n
 then
-	zenity --info --title "Erfolg" --text "Chromium wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Chromium wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fis

@@ -1,9 +1,12 @@
 #!/bin/bash
-#apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Google Earth"
+
 if dpkg -l | grep google-earth | grep ii
 then
-	echo "Google Earth ist bereits installiert"
-	zenity --info --title "Info" --text "Google Earth ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 sources=$(cat /etc/apt/sources.list.d/google-earth.list)
@@ -17,8 +20,8 @@ fi
 sudo apt-get update
 if sudo apt-get install google-earth-stable -y
 then
-	zenity --info --title "Erfolg" --text "Google Earth wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Google Earth wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi
 # alternativ http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb

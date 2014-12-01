@@ -1,8 +1,12 @@
 #!/bin/bash
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Dropbox"
+
 if dpkg -l | grep dropbox | grep ii
 then
-	echo "Dropbox ist bereits installiert"
-	zenity --info --title "Info" --text "Dropbox ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 sources=$(cat /etc/apt/sources.list.d/dropbox.list)
@@ -16,7 +20,7 @@ fi
 apt-get update
 if apt-get install dropbox -y
 then
-	zenity --info --title "Erfolg" --text "Dropbox wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Dropbox wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi

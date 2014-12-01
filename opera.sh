@@ -1,18 +1,21 @@
 #!/bin/bash
-#apt-get update
+TEXTDOMAIN=la-tools
+TEXTDOMAINDIR=./
+name="Opera"
+
 if dpkg -l | grep opera | grep ii
 then
-	echo "Opera ist bereits installiert"
-	zenity --info --title "Info" --text "Opera ist bereits installiert"
+	echo $"$name is already installed"
+	zenity --info --title $"Information" --text $"$name is already installed"
 	exit
 fi
 wget -O /tmp/opera.deb http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb
 
 if dpkg -i /tmp/opera.deb -y
 then
-	zenity --info --title "Erfolg" --text "Opera wurde erfolgreich installiert"
+	zenity --info --title $"Success" --text $"$name successfully installed"
 else
-	zenity --error --title "Fehler" --text "Opera wurde nicht erfolgreich installiert"
+	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi
 rm /tmp/opera.deb
 
