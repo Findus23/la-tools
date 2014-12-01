@@ -6,7 +6,7 @@ name="Google Chrome"
 ./installed.sh google-chrome $name && exit
 wget -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 
-if dpkg -i /tmp/chrome.deb -y
+if sudo dpkg -i /tmp/chrome.deb -y
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

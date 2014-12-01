@@ -4,7 +4,7 @@ TEXTDOMAINDIR=./
 name="Adobe Flash Player"
 
 ./installed.sh flashplugin-nonfree $name && exit
-if apt-get install flashplugin-nonfree -y
+if sudo apt-get install flashplugin-nonfree -y
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

@@ -13,8 +13,8 @@ then
 	sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 	rm temp
 fi
-apt-get update
-if apt-get install dropbox -y
+sudo apt-get update
+if sudo apt-get install dropbox -y
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else
