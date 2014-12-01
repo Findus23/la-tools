@@ -4,9 +4,9 @@ TEXTDOMAINDIR=./
 name="Skype"
 
 ./installed.sh skype $name && exit
-wget -O /tmp/skype.deb http://download.skype.com/linux/skype-debian_4.2.0.13-1_i386.deb
+wget -c -O /tmp/skype.deb http://download.skype.com/linux/skype-debian_4.2.0.13-1_i386.deb
 
-if sudo dpkg -i /tmp/skype.deb -y
+if sudo dpkg -i -y /tmp/skype.deb
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

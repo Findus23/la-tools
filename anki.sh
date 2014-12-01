@@ -5,9 +5,9 @@ name="Anki"
 
 ./installed.sh anki $name && exit
 
-wget -O /tmp/anki.deb http://ankisrs.net/download/mirror/anki-2.0.31.deb
+wget -c -O /tmp/anki.deb http://ankisrs.net/download/mirror/anki-2.0.31.deb
 sudo apt-get install mplayer -y
-if sudo dpkg -i /tmp/anki.deb -y
+if sudo dpkg -i -y /tmp/anki.deb 
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

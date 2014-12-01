@@ -4,9 +4,9 @@ TEXTDOMAINDIR=./
 name="Opera"
 
 ./installed.sh opera $name && exit
-wget -O /tmp/opera.deb http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb
+wget -O -c /tmp/opera.deb http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb
 
-if sudo dpkg -i /tmp/opera.deb -y
+if sudo dpkg -i -y /tmp/opera.deb
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else
