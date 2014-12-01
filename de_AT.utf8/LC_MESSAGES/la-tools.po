@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: la-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-01 19:08+0100\n"
-"PO-Revision-Date: 2014-12-01 19:09+0100\n"
+"POT-Creation-Date: 2014-12-01 20:12+0100\n"
+"PO-Revision-Date: 2014-12-01 20:14+0100\n"
 "Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -24,13 +24,13 @@ msgstr ""
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
 #: dropbox_neu.sh:19 dropbox.sh:12 dropbox.sh:13 geogebra44.sh:11
 #: geogebra44.sh:29 geogebra5.sh:11 geogebra5.sh:29 google-chrome.sh:11
-#: google-earth.sh:18 lame.sh:10 msfonts.sh:9 opera.sh:11 skype.sh:11
+#: google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11 skype.sh:11
 msgid "Success"
 msgstr "Erfolg"
 
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
 #: dropbox_neu.sh:19 dropbox.sh:12 geogebra44.sh:29 geogebra5.sh:29
-#: google-chrome.sh:11 google-earth.sh:18 lame.sh:10 msfonts.sh:9 opera.sh:11
+#: google-chrome.sh:11 google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11
 #: skype.sh:11
 #, sh-format
 msgid "$name successfully installed"
@@ -39,17 +39,32 @@ msgstr "$name wurde erfolgreich installiert"
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
 #: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:13 geogebra44.sh:31
 #: geogebra5.sh:13 geogebra5.sh:31 google-chrome.sh:14 google-earth.sh:20
-#: lame.sh:12 msfonts.sh:11 opera.sh:13 skype.sh:13
+#: lame.sh:12 msfonts.sh:12 opera.sh:13 skype.sh:13
 msgid "Error"
 msgstr "Fehler "
 
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
 #: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:31 geogebra5.sh:31
-#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:11 opera.sh:13
+#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:12 opera.sh:13
 #: skype.sh:13
 #, sh-format
 msgid "An error occurred while installing $name"
 msgstr "Bei der Installation von $name ist ein Fehler aufgetreten"
+
+#: apt-update.sh:19 apt-update.sh:21
+msgid "package sources outdated"
+msgstr "Paketquellen veraltet"
+
+#: apt-update.sh:20
+#, sh-format
+msgid "$wort -- $diff seconds"
+msgstr "$wort -- $diff Sekunden"
+
+#: apt-update.sh:21
+#, sh-format
+msgid "The last update was $wort ago. The package sources will get updated now"
+msgstr ""
+"Das letzte Update war vor $wort. Die Paketquellen werden nun aktualisiert. "
 
 #: dropbox.sh:13
 msgid "Please restart Nautilus (file explorer)"

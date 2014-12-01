@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Adobe Flash Player"
-
+./apt-update.sh
 ./installed.sh flashplugin-nonfree $name && exit
 if sudo apt-get install flashplugin-nonfree -y
 then

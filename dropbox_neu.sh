@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Dropbox"
-
+./apt-update.sh
 ./installed.sh dropbox $name && exit
 
 sources=$(cat /etc/apt/sources.list.d/dropbox.list)

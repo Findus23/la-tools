@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Dropbox"
-
+./apt-update.sh
 ./installed.sh dropbox $name && exit
 
 URL="https://www.dropbox.com/download?dl=packages/debian/dropbox_1.6.2_i386.deb"

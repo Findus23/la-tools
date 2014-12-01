@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Chromium"
-
+./apt-update.sh
 ./installed.sh chromium $name && exit
 
 if sudo apt-get install chromium chromium-l10n

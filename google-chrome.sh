@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Google Chrome"
-
+./apt-update.sh
 ./installed.sh google-chrome $name && exit
 URL="https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb"
 wget -c $URL

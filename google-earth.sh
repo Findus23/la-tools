@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Google Earth"
-
+./apt-update.sh
 ./installed.sh google-chrome $name && exit
 sources=$(cat /etc/apt/sources.list.d/google-earth.list)
 if [ "$sources" != "deb http://dl.google.com/linux/earth/deb/ stable main" ]

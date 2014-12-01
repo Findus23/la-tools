@@ -2,6 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name=$"Windows fonts"
+./apt-update.sh
 ./installed.sh ttf-mscorefonts-installer $name && exit
 
 if sudo apt-get install ttf-mscorefonts-installer

@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Lame"
-
+./apt-update.sh
 ./installed.sh lame $name && exit
 
 if sudo apt-get install lame

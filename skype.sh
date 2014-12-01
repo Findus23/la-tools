@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Skype"
-
+./apt-update.sh
 ./installed.sh skype $name && exit
 URL="http://download.skype.com/linux/skype-debian_4.2.0.13-1_i386.deb"
 wget -c $URL

@@ -2,7 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Geogebra 5"
-
+./apt-update.sh
 sudo apt-get update
 if dpkg -l | grep geogebra5 | grep ii
 then
