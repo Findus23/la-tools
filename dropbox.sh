@@ -10,6 +10,7 @@ wget -c $URL
 if sudo dpkg -i ./$(basename $URL)
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
+	zenity --info --title $"Success" --text $"Please restart Nautilus (file explorer)"
 	rm ./$(basename $URL)
 else
 	zenity --error --title $"Error" --text $"An error occurred while installing $name"

@@ -4,7 +4,7 @@ TEXTDOMAINDIR=./
 name="Opera"
 
 ./installed.sh opera $name && exit
-URL"http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb"
+URL="http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb"
 wget -c $URL
 if sudo dpkg -i ./$(basename $URL)
 then

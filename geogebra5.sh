@@ -3,10 +3,10 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Geogebra"
 
-apt-get update
+sudo apt-get update
 if dpkg -l | grep geogebra5 | grep ii
 then
-	if apt-get install geogebra5 -y
+	if sudo apt-get install geogebra5 -y
 	then
 		zenity --info --title $"Success" --text $"$name was successfully updated"
 	else
@@ -14,8 +14,8 @@ then
 	fi
 	exit
 fi
-apt-get purge geogebra geogebra44 -y
-apt-get autoremove -y
+sudo apt-get purge geogebra geogebra44 -y
+sudo apt-get autoremove -y
 sources=$(cat /etc/apt/sources.list.d/geogebra.list)
 if [ "$sources" != "deb http://www.geogebra.net/linux/ stable main" ]
 then
@@ -24,7 +24,7 @@ then
 	wget -O - http://www.geogebra.net/linux/office@geogebra.org.gpg.key | sudo apt-key add -
 	rm temp
 fi
-if apt-get install geogebra44 -y
+if sudo apt-get install geogebra44 -y
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

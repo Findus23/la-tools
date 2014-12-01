@@ -4,7 +4,7 @@ TEXTDOMAINDIR=./
 name="Google Chrome"
 
 ./installed.sh google-chrome $name && exit
-URL="/tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb"
+URL="https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb"
 wget -c $URL
 if sudo dpkg -i ./$(basename $URL)
 then
