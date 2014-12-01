@@ -9,7 +9,7 @@ sources=$(cat /etc/apt/sources.list.d/dropbox.list)
 if [ "$sources" != "deb http://linux.dropbox.com/debian wheezy main" ]
 then
 	echo "deb http://linux.dropbox.com/debian wheezy main" > temp
-	mv temp /etc/apt/sources.list.d/geogebra.list
+	sudo mv temp /etc/apt/sources.list.d/geogebra.list
 	sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 	rm temp
 fi

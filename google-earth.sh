@@ -8,7 +8,7 @@ sources=$(cat /etc/apt/sources.list.d/google-earth.list)
 if [ "$sources" != "deb http://dl.google.com/linux/earth/deb/ stable main" ]
 then
 	echo "deb http://dl.google.com/linux/earth/deb/ stable main" > temp
-	mv temp /etc/apt/sources.list.d/google-earth.list
+	sudo mv temp /etc/apt/sources.list.d/google-earth.list
 	wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add - 
 	rm temp
 fi

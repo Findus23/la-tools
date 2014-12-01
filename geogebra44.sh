@@ -20,7 +20,7 @@ sources=$(cat /etc/apt/sources.list.d/geogebra.list)
 if [ "$sources" != "deb http://www.geogebra.net/linux/ stable main" ]
 then
 	echo "deb http://www.geogebra.net/linux/ stable main" > temp
-	mv temp /etc/apt/sources.list.d/geogebra.list
+	sudo mv temp /etc/apt/sources.list.d/geogebra.list
 	wget -O - http://www.geogebra.net/linux/office@geogebra.org.gpg.key | sudo apt-key add -
 	rm temp
 fi
