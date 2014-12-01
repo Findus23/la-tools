@@ -3,12 +3,7 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Chromium"
 
-if dpkg -l | grep chromium | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh chromium $name && exit
 
 if sudo apt-get install chromium chromium-l10n
 then

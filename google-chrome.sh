@@ -3,12 +3,7 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Google Chrome"
 
-if dpkg -l | grep google-chrome | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh google-chrome $name && exit
 wget -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
 
 if dpkg -i /tmp/chrome.deb -y

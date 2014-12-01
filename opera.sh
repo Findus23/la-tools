@@ -3,12 +3,7 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Opera"
 
-if dpkg -l | grep opera | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh opera $name && exit
 wget -O /tmp/opera.deb http://get.geo.opera.com/pub/opera/linux/1216/opera_12.16.1860_i386.deb
 
 if dpkg -i /tmp/opera.deb -y

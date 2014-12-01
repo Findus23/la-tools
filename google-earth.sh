@@ -3,12 +3,7 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Google Earth"
 
-if dpkg -l | grep google-earth | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh google-chrome $name && exit
 sources=$(cat /etc/apt/sources.list.d/google-earth.list)
 if [ "$sources" != "deb http://dl.google.com/linux/earth/deb/ stable main" ]
 then

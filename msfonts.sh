@@ -2,13 +2,7 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name=$"Windows fonts"
-
-if dpkg -l | grep ttf-mscorefonts-installer | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh ttf-mscorefonts-installer $name && exit
 
 if sudo apt-get install ttf-mscorefonts-installer
 then

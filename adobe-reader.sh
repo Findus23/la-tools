@@ -3,12 +3,7 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Adobe-Reader"
 
-if dpkg -l | grep adobereader-deu | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh adobereader-deu $name && exit
 wget -O /tmp/adobe-reader.deb ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.1/deu/AdbeRdr9.1.0-1_i386linux_deu.deb
 
 if dpkg -i /tmp/adobe-reader.deb -y

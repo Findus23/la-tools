@@ -3,12 +3,8 @@ TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Dropbox"
 
-if dpkg -l | grep dropbox | grep ii
-then
-	echo $"$name is already installed"
-	zenity --info --title $"Information" --text $"$name is already installed"
-	exit
-fi
+./installed.sh dropbox $name && exit
+
 wget -O /tmp/dropbox.deb https://www.dropbox.com/download?dl=packages/debian/dropbox_1.6.2_i386.deb
 
 if dpkg -i /tmp/dropbox.deb -y
