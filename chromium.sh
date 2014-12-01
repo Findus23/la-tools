@@ -10,4 +10,4 @@ then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else
 	zenity --error --title $"Error" --text $"An error occurred while installing $name"
-fis
+fi
