@@ -1,7 +1,7 @@
 #!/bin/bash
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
-name="Geogebra"
+name="Geogebra 5"
 
 sudo apt-get update
 if dpkg -l | grep geogebra5 | grep ii
@@ -24,7 +24,7 @@ then
 	wget -O - http://www.geogebra.net/linux/office@geogebra.org.gpg.key | sudo apt-key add -
 	rm temp
 fi
-if sudo apt-get install geogebra44 -y
+if sudo apt-get install geogebra5 -y
 then
 	zenity --info --title $"Success" --text $"$name successfully installed"
 else

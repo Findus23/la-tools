@@ -1,7 +1,7 @@
 #!/bin/bash
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
-name="Geogebra"
+name="Geogebra 4"
 
 sudo apt-get update
 if dpkg -l | grep geogebra44 | grep ii
