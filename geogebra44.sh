@@ -4,7 +4,7 @@ TEXTDOMAINDIR=./
 name="Geogebra"
 
 apt-get update
-if dpkg -l | grep dropbox | grep ii
+if dpkg -l | grep geogebra44 | grep ii
 then
 	if apt-get install geogebra44 -y
 	then
@@ -14,7 +14,7 @@ then
 	fi
 	exit
 fi
-apt-get purge geogebra -y
+apt-get purge geogebra geogebra5 -y
 apt-get autoremove -y
 sources=$(cat /etc/apt/sources.list.d/geogebra.list)
 if [ "$sources" != "deb http://www.geogebra.net/linux/ stable main" ]
