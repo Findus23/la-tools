@@ -2,8 +2,8 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Google Chrome"
-./apt-update.sh
 ./installed.sh google-chrome $name && exit
+cd /tmp
 URL="https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb"
 wget -c $URL
 if sudo dpkg -i ./$(basename $URL)
@@ -13,4 +13,3 @@ then
 else
 	zenity --error --title $"Error" --text $"An error occurred while installing $name"
 fi
-rm /tmp/chrome.deb

@@ -2,8 +2,8 @@
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
 name="Anki"
-./apt-update.sh
 ./installed.sh anki $name && exit
+cd /tmp
 URL="http://ankisrs.net/download/mirror/anki-2.0.31.deb"
 wget -c $URL
 sudo apt-get install mplayer -y
