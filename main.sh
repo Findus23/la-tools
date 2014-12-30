@@ -1,13 +1,18 @@
 #!/bin/bash
+if [ -a /usr/bin/la-tools ] # wenn Installation abgeschlossen wurde 
+then
+	cd $(dirname $(readlink -f /usr/bin/la-tools)) #in den Installationsordner wechseln (für relative Links)
+fi
+
 TEXTDOMAIN=la-tools
 TEXTDOMAINDIR=./
-
+pwd
 notify () {
 	echo $1
-	zenity --info --text "$1" --title la-tools 2>/dev/null
+	zenity --info --text "$1" --title la-tools --icon-name=la-tools --window-icon=/usr/share/icons/hicolor/512x512/apps/la-tools.png 2>/dev/null
 } 
 
-preference=$(zenity --list --title "la-tools" --window-icon=./logo-50x50.png --text $"What do you want to do?" --column $"short" --column $"Action" \
+preference=$(zenity --list --title "la-tools" --window-icon=/usr/share/icons/hicolor/512x512/apps/la-tools.png --text $"What do you want to do?" --column $"short" --column $"Action" \
 	"install" $"Install Program" \
 	"update" $"Update la-tools" \
 	"help" $"Show Help" \
@@ -25,7 +30,7 @@ case "$preference" in
 		fi
 		exit 0
 		;;
-	install) program=$(zenity --list --title "la-tools" --height=500 --text $"What program should be installed?" --ok-label $"Install" --column $"file" --column $"program" --hide-column "1" \
+	install) program=$(zenity --list --title "la-tools" --height=500  --window-icon=/usr/share/icons/hicolor/512x512/apps/la-tools.png --text $"What program should be installed?" --ok-label $"Install" --column $"file" --column $"program" --hide-column "1" \
 		"adobe-flash.sh" "Adobe Flash Player" \
 		"adobe-reader.sh" "Adobe Reader" \
 		"anki.sh" "Anki" \
