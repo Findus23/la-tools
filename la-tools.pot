@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-01 20:12+0100\n"
+"POT-Creation-Date: 2014-12-30 12:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
-#: dropbox_neu.sh:19 dropbox.sh:12 dropbox.sh:13 geogebra44.sh:11
+#: dropbox_neu.sh:19 dropbox.sh:11 dropbox.sh:12 geogebra44.sh:11
 #: geogebra44.sh:29 geogebra5.sh:11 geogebra5.sh:29 google-chrome.sh:11
 #: google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11 skype.sh:11
+#: xampp.sh:11
 msgid "Success"
 msgstr ""
 
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
-#: dropbox_neu.sh:19 dropbox.sh:12 geogebra44.sh:29 geogebra5.sh:29
+#: dropbox_neu.sh:19 dropbox.sh:11 geogebra44.sh:29 geogebra5.sh:29
 #: google-chrome.sh:11 google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11
-#: skype.sh:11
+#: skype.sh:11 xampp.sh:11
 #, sh-format
 msgid "$name successfully installed"
 msgstr ""
 
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
-#: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:13 geogebra44.sh:31
+#: dropbox_neu.sh:21 dropbox.sh:15 geogebra44.sh:13 geogebra44.sh:31
 #: geogebra5.sh:13 geogebra5.sh:31 google-chrome.sh:14 google-earth.sh:20
-#: lame.sh:12 msfonts.sh:12 opera.sh:13 skype.sh:13
+#: lame.sh:12 msfonts.sh:12 opera.sh:14 skype.sh:13 xampp.sh:14
 msgid "Error"
 msgstr ""
 
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
-#: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:31 geogebra5.sh:31
-#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:12 opera.sh:13
-#: skype.sh:13
+#: dropbox_neu.sh:21 dropbox.sh:15 geogebra44.sh:31 geogebra5.sh:31
+#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:12 opera.sh:14
+#: skype.sh:13 xampp.sh:14
 #, sh-format
 msgid "An error occurred while installing $name"
 msgstr ""
@@ -61,7 +62,7 @@ msgstr ""
 msgid "The last update was $wort ago. The package sources will get updated now"
 msgstr ""
 
-#: dropbox.sh:13
+#: dropbox.sh:12
 msgid "Please restart Nautilus (file explorer)"
 msgstr ""
 
@@ -83,6 +84,56 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: msfonts.sh:4
+#: main.sh:10
+msgid "What do you want to do?"
+msgstr ""
+
+#: main.sh:10
+msgid "short"
+msgstr ""
+
+#: main.sh:10
+msgid "Action"
+msgstr ""
+
+#: main.sh:11
+msgid "Install Program"
+msgstr ""
+
+#: main.sh:12
+msgid "Update la-tools"
+msgstr ""
+
+#: main.sh:13
+msgid "Show Help"
+msgstr ""
+
+#: main.sh:22
+#, sh-format
+msgid "There is no Update available. The last change was $update_date."
+msgstr ""
+
+#: main.sh:24
+#, sh-format
+msgid "la-tools was updated. The last change was $update_date."
+msgstr ""
+
+#: main.sh:28
+msgid "What program should be installed?"
+msgstr ""
+
+#: main.sh:28
+msgid "file"
+msgstr ""
+
+#: main.sh:28
+msgid "program"
+msgstr ""
+
+#: main.sh:39 msfonts.sh:4
 msgid "Windows fonts"
+msgstr ""
+
+#: main.sh:47
+msgid "unknown output"
 msgstr ""

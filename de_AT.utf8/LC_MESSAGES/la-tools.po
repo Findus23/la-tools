@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: la-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-01 20:12+0100\n"
-"PO-Revision-Date: 2014-12-01 20:14+0100\n"
+"POT-Creation-Date: 2014-12-30 12:27+0100\n"
+"PO-Revision-Date: 2014-12-30 12:27+0100\n"
 "Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -22,31 +22,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: ../..\n"
 
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
-#: dropbox_neu.sh:19 dropbox.sh:12 dropbox.sh:13 geogebra44.sh:11
+#: dropbox_neu.sh:19 dropbox.sh:11 dropbox.sh:12 geogebra44.sh:11
 #: geogebra44.sh:29 geogebra5.sh:11 geogebra5.sh:29 google-chrome.sh:11
 #: google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11 skype.sh:11
+#: xampp.sh:11
 msgid "Success"
 msgstr "Erfolg"
 
 #: adobe-flash.sh:9 adobe-reader.sh:12 anki.sh:12 chromium.sh:10
-#: dropbox_neu.sh:19 dropbox.sh:12 geogebra44.sh:29 geogebra5.sh:29
+#: dropbox_neu.sh:19 dropbox.sh:11 geogebra44.sh:29 geogebra5.sh:29
 #: google-chrome.sh:11 google-earth.sh:18 lame.sh:10 msfonts.sh:10 opera.sh:11
-#: skype.sh:11
+#: skype.sh:11 xampp.sh:11
 #, sh-format
 msgid "$name successfully installed"
 msgstr "$name wurde erfolgreich installiert"
 
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
-#: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:13 geogebra44.sh:31
+#: dropbox_neu.sh:21 dropbox.sh:15 geogebra44.sh:13 geogebra44.sh:31
 #: geogebra5.sh:13 geogebra5.sh:31 google-chrome.sh:14 google-earth.sh:20
-#: lame.sh:12 msfonts.sh:12 opera.sh:13 skype.sh:13
+#: lame.sh:12 msfonts.sh:12 opera.sh:14 skype.sh:13 xampp.sh:14
 msgid "Error"
 msgstr "Fehler "
 
 #: adobe-flash.sh:11 adobe-reader.sh:15 anki.sh:15 chromium.sh:12
-#: dropbox_neu.sh:21 dropbox.sh:16 geogebra44.sh:31 geogebra5.sh:31
-#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:12 opera.sh:13
-#: skype.sh:13
+#: dropbox_neu.sh:21 dropbox.sh:15 geogebra44.sh:31 geogebra5.sh:31
+#: google-chrome.sh:14 google-earth.sh:20 lame.sh:12 msfonts.sh:12 opera.sh:14
+#: skype.sh:13 xampp.sh:14
 #, sh-format
 msgid "An error occurred while installing $name"
 msgstr "Bei der Installation von $name ist ein Fehler aufgetreten"
@@ -66,7 +67,7 @@ msgid "The last update was $wort ago. The package sources will get updated now"
 msgstr ""
 "Das letzte Update war vor $wort. Die Paketquellen werden nun aktualisiert. "
 
-#: dropbox.sh:13
+#: dropbox.sh:12
 msgid "Please restart Nautilus (file explorer)"
 msgstr "Bitte starte Nautilus neu (Dateiexplorer)"
 
@@ -88,9 +89,59 @@ msgstr "$2 ist bereits installiert"
 msgid "Information"
 msgstr "Information"
 
-#: msfonts.sh:4
+#: main.sh:10
+msgid "What do you want to do?"
+msgstr "Was möchtest du tun?"
+
+#: main.sh:10
+msgid "short"
+msgstr "Kurzform"
+
+#: main.sh:10
+msgid "Action"
+msgstr "Aktion"
+
+#: main.sh:11
+msgid "Install Program"
+msgstr "Programm installieren"
+
+#: main.sh:12
+msgid "Update la-tools"
+msgstr "la-tools aktualisieren"
+
+#: main.sh:13
+msgid "Show Help"
+msgstr "Hilfe anzeigen"
+
+#: main.sh:22
+#, sh-format
+msgid "There is no Update available. The last change was $update_date."
+msgstr " Kein Update verfügbar. Die letzte Änderung war $update_date."
+
+#: main.sh:24
+#, sh-format
+msgid "la-tools was updated. The last change was $update_date."
+msgstr "la-tools wurde aktualisiert. Die letzte Änderung war $update_date."
+
+#: main.sh:28
+msgid "What program should be installed?"
+msgstr "Welches Programm soll installiert werden?"
+
+#: main.sh:28
+msgid "file"
+msgstr "Datei"
+
+#: main.sh:28
+msgid "program"
+msgstr "Programm"
+
+#: main.sh:39 msfonts.sh:4
 msgid "Windows fonts"
 msgstr "Windows Schriftarten"
+
+#: main.sh:47
+msgid "unknown output"
+msgstr "unbekannte Ausgabe"
 
 #~ msgid "$name are already installed"
 #~ msgstr "$name sind bereits installiert"
