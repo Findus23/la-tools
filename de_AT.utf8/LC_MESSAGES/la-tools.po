@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: la-tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-30 12:27+0100\n"
-"PO-Revision-Date: 2014-12-30 12:27+0100\n"
+"POT-Creation-Date: 2014-12-30 13:32+0100\n"
+"PO-Revision-Date: 2014-12-30 13:32+0100\n"
 "Last-Translator: Lukas Winkler <l.winkler23@gmx.at>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -113,6 +113,10 @@ msgstr "la-tools aktualisieren"
 msgid "Show Help"
 msgstr "Hilfe anzeigen"
 
+#: main.sh:16 main.sh:43
+msgid "Aborted"
+msgstr "Abgebrochen"
+
 #: main.sh:22
 #, sh-format
 msgid "There is no Update available. The last change was $update_date."
@@ -128,6 +132,10 @@ msgid "What program should be installed?"
 msgstr "Welches Programm soll installiert werden?"
 
 #: main.sh:28
+msgid "Install"
+msgstr "Installieren"
+
+#: main.sh:28
 msgid "file"
 msgstr "Datei"
 
@@ -139,7 +147,7 @@ msgstr "Programm"
 msgid "Windows fonts"
 msgstr "Windows Schriftarten"
 
-#: main.sh:47
+#: main.sh:48
 msgid "unknown output"
 msgstr "unbekannte Ausgabe"
 
