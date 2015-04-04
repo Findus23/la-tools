@@ -21,7 +21,7 @@ then
 	exit
 fi
 
-sudo apt-get purge geogebra geogebra44 -y
+sudo apt-get purge geogebra geogebra44 geogebra-mime-data geogebra-gnome geogebra-kde -y
 sudo apt-get autoremove -y
 sudo apt-get install --only-upgrade lernstick-geogebra-wheezy
 
